@@ -1,0 +1,70 @@
+1. When rendering the page for the first time, which file is called first?
+Answer: main.ts file will be called first. In this file app component to be bootstrapped is called.
+
+2. What changes need to done in the app.module.ts file if we create a component/directives
+manually? i.e. without using cli command line tool
+Answer: First import the component/directive
+Then in declarations add the component/directive name
+
+3. Different types of decorators or list few decorators
+Answer:
+Class Decorators - @NgModule, @Component, @Directive
+Property Decorators - @Input, @Output
+Method Decorators - @HostListener, @HostBinding
+Parameter Decorators - @Inject
+
+4. What are the Mandatory objects that must be defined in component Decorators
+Answer: selector and templateUrl/template
+
+5. How decorators should be defined in .ts file for example in component Decorator
+
+Answer:
+@Component ({
+selector: 'app-port',
+template: './port.component.html',
+styles: ['./port.component.css']
+})
+
+6. Different types of component selector
+Answer:
+Element selector - selector: ‘app-test’ In html 
+Class selector - selector: ‘.app-test’ In html 
+Property selector - selector: ‘[app-test]’ In html 
+We don’t have Id selector in angular
+
+7. how many html file in templateUrl object can be given to a component decorator
+Answer: Only one html file can be given in templateUrl object
+
+8. What is data binding?
+Answer: It’s nothing but the communication between .ts file and the html file. Say for example, you have
+done some logical implementation in the ts and that you want to show it in the html template.
+
+9. Different type of data binding.
+Answer:
+String Interpolation
+Property binding
+Event binding
+Two way data binding
+
+10. What is a String interpolation? Explain with a syntax
+Answer: It’s outputting the data in template/html file from ts file as string and this should always be a
+string.
+Syntax: {{data}}
+
+11. What is property binding? Explain with a syntax
+Answer: It’s binding the value to a property of the DOM element.
+Syntax: [propertyName] =”data”
+
+12. what is event binding? Explain with a syntax
+Answer: It’s binding the value to an event of a DOM element
+Syntax: (change) ="onChoosingPort ()"
+
+13. What is Two way data binding? Explain with a syntax
+Answer: It’s binding the data value both side. I.e. assigning the property value from type script to
+template and on changing the value in template assigning the value to type script file.
+Syntax :[(ngModel)] =”data”
+
+14. What are the different types of Built in Directives available in Angular
+Answer:
+Structural directives: ngIf & ngFor
+Attribute directives: ngStyle & ngClass
